@@ -1,0 +1,13 @@
+@import '../../styles/colors.scss';
+
+.button {
+    color: $main-color !important;
+    background-color: $outstanding-color !important;
+    border-color: $outstanding-color !important;
+    width: 200px;
+}
+
+.button--center {
+    margin-left: auto;
+    margin-right: auto;
+}
