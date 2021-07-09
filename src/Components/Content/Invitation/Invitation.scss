@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.invitation {
+    &__from-guide {
+        font-family: 'Caveat', cursive;
+        color: #F26A1B;
+        font-size: 27px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: left;
+        transform: rotate(-10deg);
+        text-shadow: 1px 1px #333;
+    }
+}
