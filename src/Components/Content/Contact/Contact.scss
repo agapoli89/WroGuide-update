@@ -1,5 +1,83 @@
+@import '../../../styles/breakpoints.scss';
 @import '../../../styles/colors.scss';
 
 .contact {
     background-color: $section-background-color;
+
+    @media (min-width: $layout-breakpoint-small) {
+        padding-right: 10vw !important;
+        padding-left: 10vw !important;
+    }
+
+    @media (min-width: $layout-breakpoint-large) {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "data form";
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+
+        &__data, &__form-wrapper {
+            margin: 0 !important;
+        }
+    }
+
+    &__header {
+        grid-area: header;
+        margin-bottom: 50px;
+    }
+
+    &__data {
+        margin: 30px 5px;
+        display: grid;
+        grid-area: data;
+
+        @media (min-width: $layout-breakpoint-medium) {
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(2, 50%);
+        }
+        
+        &__box {
+            margin: 10px 5px;
+            padding: 20px 10px;
+            background-color: $boxes-color;
+            color: $main-color;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+
+            &--outstanding {
+                background-color: $outstanding-color;
+            } 
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__icon {
+        font-size: 40px;
+
+        &--arrow-mobile {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__form-wrapper {
+        margin: 30px 5px;
+        grid-area: form;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__form {
+
+        width: 100%;
+        
+        @media (min-width: $layout-breakpoint-medium) {
+            width: 80%;
+        }
+    }
 }
