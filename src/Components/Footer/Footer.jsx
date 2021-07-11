@@ -1,6 +1,6 @@
 const Footer = () => {
     return (  
-        <footer id="info" class="p-2">
+        <footer id="info" className="p-2">
             Agnieszka Polińska - Przewodnik po Wrocławiu &copy; 2020 Wszelkie prawa zastrzeżone. 
 	    </footer>
     );
