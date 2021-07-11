@@ -1,8 +1,8 @@
 import './Button.scss';
 
-const Button = () => {
+const Button = ({text, additionalClass}) => {
     return (  
-        <button type="submit" className="btn button button--center px-4">Zapraszam do quizu!</button>
+        <button type="submit" className={`btn button button--center px-4 ${additionalClass}`}>{text}</button>
     );
 }
  
