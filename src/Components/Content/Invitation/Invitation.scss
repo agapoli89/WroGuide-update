@@ -1,14 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import '../../../styles/breakpoints.scss';
 
 .invitation {
+
+    @media (min-width: $layout-breakpoint-medium) {
+        display: grid;
+        grid-template-areas: 
+            "quotation dwarf"
+            "from-guide dwarf";
+        column-gap: 50px;
+    }
+
+    @media (min-width: $layout-breakpoint-large) {
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        &__from-guide {
+            font-size: 2rem !important;
+        }
+    }
+
+    &__quotation {
+        text-align: right;
+        grid-area: quotation;
+    }
+    
     &__from-guide {
         font-family: 'Caveat', cursive;
         color: #F26A1B;
-        font-size: 27px;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        font-size: 1.7rem;
+        margin-top: 50px;
+        margin-bottom: 50px;
         text-align: left;
         transform: rotate(-10deg);
         text-shadow: 1px 1px #333;
+        grid-area: from-guide;
+    }
+
+    &__image-wrapper {
+        grid-area: dwarf;
     }
 }

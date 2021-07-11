@@ -13,7 +13,7 @@ const Invitation = () => {
             <p className="invitation__from-guide">
                 Zapraszam na wycieczkę! Agnieszka&nbsp;Polińska - przewodniczka po&nbsp;Wrocławiu :)
 			</p>
-            <figure>
+            <figure className='invitation__image-wrapper'>
                 <img src={inviteImage}  alt="turysta" className="invitation__image img-fluid rounded"/>
             </figure>
 		</section>
