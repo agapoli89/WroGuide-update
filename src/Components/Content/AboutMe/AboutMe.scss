@@ -3,4 +3,10 @@
 .about-me {
     background-color: $section-background-color;
     text-align: justify;
-}
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+        align-self: center;
+    }
+} 

@@ -1,3 +1,9 @@
 .offert {
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+        align-self: center;
+    }
 }
