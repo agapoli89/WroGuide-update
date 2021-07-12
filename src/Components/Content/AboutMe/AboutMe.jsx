@@ -6,7 +6,7 @@ const AboutMe = () => {
     return (  
         <section className="section about-me">
             <h2>Kim jestem?</h2>
-            <img src={aboutMeImage} alt="ja" className="float-lg-left img-fluid mr-lg-3 my-3 rounded about-me__image"></img>
+            <img src={aboutMeImage} alt="ja" className="my-3 rounded about-me__image"></img> 
             <p>
                 Urodziłam się we Wrocławiu i&nbsp;tu spędziłam większość życia. Odkąd pamiętam interesowało mnie wszystko co związane z&nbsp;tym miastem: jego dzieje, architektura czy kultura. Pewnie dlatego zdecydowałam się studiować historię na Uniwersytecie Wrocławskim (staram się jednak nie zanudzać swoich słuchaczy przytaczaniem jedynie pustych dat!). Odkąd ukończyłam kurs przewodnika po Wrocławiu, co chwilę odkrywam nowe aspekty miasta oraz przekonuję się jak inspirujące może być dzielenie się wiedzą, które przy okazji daje możliwość poznania innych perspektyw i&nbsp;punktów widzenia.
             </p>
