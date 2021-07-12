@@ -5,7 +5,7 @@ const ContactForm = () => {
         <div className="contact__form-wrapper">
             <h3>Formularz</h3>
             <form className="contact__form">
-                <div class="mb-3">
+                <div className="mb-3">
                     <label htmlFor="email" className="form-label">Adres e-mail</label>
                     <input type="email" className="form-control" id="email" placeholder="nazwa@domena" />
                 </div>

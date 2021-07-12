@@ -1,23 +1,25 @@
 @import './styles/colors.scss';
+@import './styles/breakpoints.scss';
 
 .App {
   text-align: center;
   background-image: url('./images/background-image.png'); /* Background pattern from Toptal Subtle Patterns */
   color: $main-color;
+  font-size: calc(10px + 1.6vmin);
 }
 
 .section {
   padding: 30px;
+
+  @media (min-width: $layout-breakpoint-medium) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  @media (min-width: $layout-breakpoint-large) {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
 }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}  */
 
