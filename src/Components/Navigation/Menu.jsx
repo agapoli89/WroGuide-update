@@ -2,31 +2,32 @@ import './Menu.scss';
 
 const Menu = () => {
     return (  
-        <nav className="navbar navbar-expand-lg navbar-dark py-0 menu">
-            <button className="navbar-toggler menu__button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
-            {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mx-auto lista">
-                    <li className="nav-item bg-pozycja">
-                        <a className="nav-link" id="o_mniel" href="#">O mnie</a>
-                    </li>
-                    <li className="nav-item bg-pozycja">
-                        <a className="nav-link" id="co_oferujel" href="#">Co oferuję?</a>
-                    </li>
-                    <li className="nav-item bg-pozycja">
-                        <a className="nav-link" id="wroclawl" href="#">Wrocław</a>
-                    </li>
-                    <li className="nav-item bg-pozycja">
-                        <a className="nav-link" id="quizl" href="#">Quiz</a>
-                    </li>
-                    <li className="nav-item bg-pozycja">
-                        <a className="nav-link" id="kontaktl" href="#">Kontakt</a>
-                    </li>
-                </ul>
-            </div> */}
-	</nav>
+        <aside className="menu">
+            <nav className="navbar navbar-dark menu__toggler">
+                <div className="container-fluid">
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+            <ul className="collapse show menu__list" id="navbarToggleExternalContent">
+                <li class="nav-item">
+					<a className="nav-link menu__link" id="about-me" href="#">O mnie</a>
+				</li>
+				<li className="nav-item">
+					<a className="nav-link menu__link" id="offert" href="#">Co oferuję?</a>
+				</li>
+				<li className="nav-item">
+					<a className="nav-link menu__link" id="about-wroclaw" href="#">Wrocław</a>
+				</li> 
+				<li className="nav-item">
+					<a className="nav-link menu__link" id="quiz" href="#">Quiz</a>
+				</li>
+				<li className="nav-item">
+					<a className="nav-link menu__link" id="contact" href="#">Kontakt</a>
+				</li> 
+            </ul>
+         </aside>
     );
 }
  
