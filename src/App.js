@@ -1,3 +1,5 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import Content from './Components/Content/Content';
 import Footer from './Components/Footer/Footer';
@@ -8,12 +10,14 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Menu />
-      <Content />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Menu />
+        <Content />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

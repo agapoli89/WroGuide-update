@@ -4,7 +4,7 @@ import './AboutWroclaw.scss';
 
 const AboutWroclaw = () => {
     return (  
-        <section className="section about-wroclaw">
+        <section id="about-wroclaw" className="section about-wroclaw">
             <h2>Wrocław</h2>
             <p>
                 ... to miasto, którego właściwie nikomu nie trzeba        przedstawiać. Stolica Dolnego Śląska, piąte pod względem powierzchni, a czwarte co do liczby mieszkańców miasto w Polsce, jeden z głównych ośrodków uniwersyteckich w kraju itp.

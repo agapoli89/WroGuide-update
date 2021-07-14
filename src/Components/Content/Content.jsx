@@ -9,7 +9,7 @@ const Content = () => {
     return (  
         <main>
             <Invitation />
-            <AboutMe />
+            <AboutMe id="about-me"/>
             <Offert />
             <AboutWroclaw />
             <Quiz />

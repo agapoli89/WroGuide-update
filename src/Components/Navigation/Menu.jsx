@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import {useMediaQuery} from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
+import { NavHashLink as Link } from 'react-router-hash-link';
 
 import './Menu.scss';
 
@@ -8,6 +9,15 @@ const Menu = () => {
     const isNotMobileMenu = useMediaQuery({ query: '(min-width:576px)' });
 
     const toggleMenu = () => setIsMenuVisible(prev => !prev);
+
+    //function from: https://codesandbox.io/s/04rsh?file=/src/components/Navbar.jsx:977-1018
+    const scrollWithOffset = (el, offset) => {
+        window.scroll({
+          top: el.offsetTop - offset,
+          left: 0,
+          behavior: "smooth"
+        });
+    };
 
     return (  
         <aside className="menu">
@@ -20,19 +30,59 @@ const Menu = () => {
             </nav>
             <ul className={`collapse ${isNotMobileMenu | isMenuVisible && 'show'} menu__list`} id="navbarToggleExternalContent">
                 <li className="nav-item">
-					<a className="nav-link menu__link" id="about-me" href="#">O mnie</a>
+                    <Link 
+                        activeClass="active"
+                        to="/#about-me" 
+                        scroll={(el) => scrollWithOffset(el, 55)}
+                        exact
+                        className="nav-link menu__link"
+                    >
+                        O mnie
+                    </Link>
 				</li>
 				<li className="nav-item">
-					<a className="nav-link menu__link" id="offert" href="#">Co oferuję?</a>
+                    <Link 
+                        activeClass="active"
+                        to="/#offert" 
+                        scroll={(el) => scrollWithOffset(el, 55)}
+                        exact
+                        className="nav-link menu__link"
+                    >
+                        Co oferuję
+                    </Link>
 				</li>
 				<li className="nav-item">
-					<a className="nav-link menu__link" id="about-wroclaw" href="#">Wrocław</a>
+                    <Link 
+                        activeClass="active"
+                        to="/#about-wroclaw"
+                        scroll={(el) => scrollWithOffset(el, 55)} 
+                        exact
+                        className="nav-link menu__link"
+                    >
+                        Wrocław
+                    </Link>
 				</li> 
 				<li className="nav-item">
-					<a className="nav-link menu__link" id="quiz" href="#">Quiz</a>
+                    <Link 
+                        activeClass="active"
+                        to="/#quiz" 
+                        scroll={(el) => scrollWithOffset(el, 55)}
+                        exact
+                        className="nav-link menu__link"
+                    >
+                        Quiz
+                    </Link>
 				</li>
 				<li className="nav-item">
-					<a className="nav-link menu__link" id="contact" href="#">Kontakt</a>
+                    <Link 
+                        activeClass="active"
+                        to="/#contact" 
+                        scroll={(el) => scrollWithOffset(el, 55)}
+                        exact
+                        className="nav-link menu__link"
+                    >
+                        Kontakt
+                    </Link>
 				</li> 
             </ul>
          </aside>

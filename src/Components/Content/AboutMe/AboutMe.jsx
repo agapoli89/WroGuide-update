@@ -4,7 +4,7 @@ import './AboutMe.scss'
 
 const AboutMe = () => {
     return (  
-        <section className="section about-me">
+        <section id="about-me" className="section about-me">
             <h2>Kim jestem?</h2>
             <img src={aboutMeImage} alt="ja" className="my-3 rounded about-me__image"></img> 
             <p>
