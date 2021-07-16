@@ -1,15 +1,49 @@
+import { useState } from 'react';
+
 import Button from '../../Button/Button';
+import QuizStart from './QuizStart';
+import QuizQuestion from './QuizQuestion';
+import QuizSummary from './QuizSummary';
 
 import './Quiz.scss';
 
 const Quiz = () => {
+    const [slideNumber, setSlideNumber] = useState(0);
+    const [isAnswerVisible, setIsAnswerVisible] = useState(false);
+
+    const quizContent = slideNumber === 0 
+        ? <QuizStart /> 
+        : slideNumber === 6
+            ? <QuizSummary />
+            : <QuizQuestion number={slideNumber} isAnswerVisible={isAnswerVisible}/>;
+
+    const buttonText = slideNumber === 0 
+        ? "Zapraszam do quizu!" 
+        : slideNumber === 5 & isAnswerVisible
+            ? "Sprawdź wynik"
+            : slideNumber === 6
+                ? "Spróbuj jeszcze raz"
+                : !isAnswerVisible 
+                ? "Sprawdź"
+                : "Następne pytanie"
+
+    const handleChangeSlide = () => {
+        if (slideNumber === 6) {
+            setSlideNumber(0);
+            return;
+        }
+        if (isAnswerVisible || slideNumber === 0) {
+            setSlideNumber(prev => prev + 1);
+            setIsAnswerVisible(false);
+            return;
+        } 
+        setIsAnswerVisible(true)
+    }
+
     return (  
         <section id="quiz" className="section quiz">
-            <h2>Quiz</h2>
-            <p>
-                Przygotowałam kilka pytań, które mają na celu nie tylko sprawdzenie Waszej wiedzy, ale także (a&nbsp;może przede wszystkim) zwrócenie uwagi na pewne aspekty Wrocławia, które z różnych względów mogą być pomijane podczas indywidualnych wycieczek. Jeżeli nie zachęci Was to do wybrania spaceru z&nbsp;przewodnikiem, to na pewno będzie bodźcem aby poczytać co nieco i&nbsp;wgłębić się w klimat miasta!
-            </p>
-            <Button text="Zapraszam do quizu!"/>
+            {quizContent}
+            <Button text={buttonText} click={handleChangeSlide} /> 
         </section>
     );
 }
