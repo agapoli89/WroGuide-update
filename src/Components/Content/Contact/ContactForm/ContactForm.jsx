@@ -13,7 +13,7 @@ const ContactForm = () => {
                     <label htmlFor="message" className="form-label">Wiadomość</label>
                     <textarea className="form-control" id="message" placeholder="Zapraszam do kontaktu :)" rows="3"></textarea>
                 </div>
-                <Button text="Wyślij" additionalClass="contact-button"/>
+                <Button type="submit" text="Wyślij" additionalClass="contact-button" />
             </form>
         </div>
     );
