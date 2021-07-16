@@ -31,55 +31,60 @@ const Menu = () => {
             <ul className={`collapse ${isNotMobileMenu | isMenuVisible && 'show'} menu__list`} id="navbarToggleExternalContent">
                 <li className="nav-item">
                     <Link 
-                        activeClass="active"
+                        activeclass="active"
                         to="/#about-me" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
                         className="nav-link menu__link"
+                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
                     >
                         O mnie
                     </Link>
 				</li>
 				<li className="nav-item">
                     <Link 
-                        activeClass="active"
+                        activeclass="active"
                         to="/#offert" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
                         className="nav-link menu__link"
+                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
                     >
                         Co oferuję
                     </Link>
 				</li>
-				<li className="nav-item">
+				<li className="nav-item" >
                     <Link 
-                        activeClass="active"
+                        activeclass="active"
                         to="/#about-wroclaw"
                         scroll={(el) => scrollWithOffset(el, 55)} 
                         exact
                         className="nav-link menu__link"
+                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
                     >
                         Wrocław
                     </Link>
 				</li> 
 				<li className="nav-item">
                     <Link 
-                        activeClass="active"
+                        activeclass="active"
                         to="/#quiz" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
                         className="nav-link menu__link"
+                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
                     >
                         Quiz
                     </Link>
 				</li>
 				<li className="nav-item">
                     <Link 
-                        activeClass="active"
+                        activeclass="active"
                         to="/#contact" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
                         className="nav-link menu__link"
+                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
                     >
                         Kontakt
                     </Link>
