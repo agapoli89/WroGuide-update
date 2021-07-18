@@ -1,18 +1,13 @@
 import { quizData } from './QuizData';
 import Button from '../../Button/Button';
-import { useState } from 'react';
 
-const QuizQuestion = ({ number, isAnswerVisible, answerIsNotSelected, clickChangeSlide, clickCheckAnswer, clickNoAnswerSelected }) => {
-    const [selectedAnswer, setSelectedAnswer] = useState(null);
-
+const QuizQuestion = ({ number, isAnswerVisible, answerIsNotSelected, clickChangeSlide, clickCheckAnswer, clickNoAnswerSelected, selectedAnswer, changeAnswer, inputChecked, handleChangeInputChecked }) => {
+    
     const currentQuestion = quizData.filter(({id}) => id === number);
 
-    const handleInputClick = (e) => {
-        setSelectedAnswer(e.target.value)
-    }
     const currentAnswers = currentQuestion[0].answers.map(({id, text}) => (
         <label key={id}>
-            <input type="radio" value={id} name={`q${number}`} onClick={handleInputClick}/> {text}
+            <input type="radio" value={id} name={number} checked={inputChecked} onChange={handleChangeInputChecked} onClick={changeAnswer}/> {text}
         </label>
     ))
     
@@ -34,7 +29,7 @@ const QuizQuestion = ({ number, isAnswerVisible, answerIsNotSelected, clickChang
             : "Następne pytanie"
 
     const clickFunction = buttonText === "Sprawdź" & selectedAnswer
-        ? () => clickCheckAnswer(selectedAnswer, number) 
+        ? clickCheckAnswer
         : selectedAnswer
             ? clickChangeSlide
             : clickNoAnswerSelected
@@ -44,7 +39,7 @@ const QuizQuestion = ({ number, isAnswerVisible, answerIsNotSelected, clickChang
             <h4>{`${number}. ${currentQuestion[0].question}`}</h4>
             {currentAnswers}
             {answerToDisplay}
-            <Button text={buttonText} click={clickFunction}/>
+            <Button text={buttonText} click={clickFunction} />
         </>
     );
 }
