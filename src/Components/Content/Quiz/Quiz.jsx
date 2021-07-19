@@ -13,7 +13,6 @@ const Quiz = () => {
     const [answerIsNotSelected, setAnswerIsNotSelected] = useState(false);
     const [isAnswerVisible, setIsAnswerVisible] = useState(false);
     const [score, setScore] = useState(0);
-    const [questionNumber, setQuestionNumber] = useState(null);
     const [inputChecked, setInputChecked] = useState(false);
 
     const handleChangeInputChecked = () => setInputChecked(true);
@@ -21,33 +20,32 @@ const Quiz = () => {
     const handleChangeSlide = () => {
         if (slideNumber === 6) {
             setSlideNumber(0);
+            setScore(0);
             return;
         }
         if (isAnswerVisible || slideNumber === 0) {
-            setInputChecked(false);
             setSelectedAnswer('');
             setSlideNumber(prev => prev + 1);
             setIsAnswerVisible(false);
             setAnswerIsNotSelected(false);
             return;
         } 
+        if (!isAnswerVisible) setInputChecked(false);
         checkCorrectAnswer();
     }
 
     const handleOnChangeAnswer = e => {
         setSelectedAnswer(e.target.value);
-        setQuestionNumber(e.target.name);
     }
 
     const checkCorrectAnswer = () => {
 
-        const currentQuestion = quizData.filter(question => question.id === Number(questionNumber))[0];
+        const currentQuestion = quizData.filter(question => question.id === Number(slideNumber))[0];
         const correctAnswer = currentQuestion.answers.filter(answer => answer.correct === true)[0].id;
 
         if (correctAnswer === selectedAnswer) {
             setScore(prev => prev + 1);
         }
-
         setIsAnswerVisible(true);
         setAnswerIsNotSelected(false);
     }
@@ -64,12 +62,12 @@ const Quiz = () => {
             number={slideNumber} 
             isAnswerVisible={isAnswerVisible} 
             answerIsNotSelected={answerIsNotSelected} 
+            selectedAnswer={selectedAnswer}
+            inputChecked={inputChecked}
             clickChangeSlide={handleChangeSlide} 
             clickCheckAnswer={checkCorrectAnswer} 
             clickNoAnswerSelected={handleNoAnswerSelected}
-            selectedAnswer={selectedAnswer}
             changeAnswer={handleOnChangeAnswer}
-            inputChecked={inputChecked}
             handleChangeInputChecked={handleChangeInputChecked}
           />;
 

@@ -9,7 +9,7 @@ const Button = ({
     return (  
         <button 
             type={type}
-            className={`btn button button--center px-4 ${additionalClass}`}
+            className={`btn button button--center px-4 mt-4 ${additionalClass}`}
             onClick={click}
         >
             {text}

@@ -7,7 +7,7 @@ export const quizData = [
                 id: 'a',
                 text: 'Kolor pomarańczowy widnieje na fladze Wrocławia?',
                 correct: false,
-                comment: 'Niestety nie. Na fladze Wrocławia widnieją kolory: czerwony i&nbsp;żółty. Nie mogę przyznać punktu mimo, że te dwie barwy po połączeniu faktycznie tworzą pomarańczowy :)',
+                comment: 'Niestety nie. Na fladze Wrocławia widnieją kolory: czerwony i żółty. Nie mogę przyznać punktu mimo, że te dwie barwy po połączeniu faktycznie tworzą pomarańczowy :)',
             },
             {
                 id: 'b',
@@ -22,7 +22,7 @@ export const quizData = [
                 comment: 'Tak!'
             }
         ],
-        correctAnswer: 'Pomarańczowa Alternatywa to ruch opozycyjno-artystyczny, który narodził się we Wrocławiu w latach 80. XX wieku. Jego celem była walka z ówczesnym systemem za pomocą śmiechu i absurdu. Już w trakcie stanu wojennego na ulicach Wrocławia, w miejsce zatartych przez władze haseł antykomunistycznych, zaczęły pojawiać się rysunki krasnoludków. Później grupa skupiła się na organizacji happeningów (m.in. Krasnoludki na Świdnickiej). Od lat 90., Pomarańczowa Alternatywa znacznie ograniczyła swoją działalność, ale krasnoludki pozostały i teraz postrzegane są jako jeden z symboli Wrocławia.',
+        correctAnswer: 'Poprawna odpowiedź: Pomarańczowa Alternatywa, czyli ruch opozycyjno-artystyczny, który narodził się we Wrocławiu w latach 80. XX wieku. Jego celem była walka z ówczesnym systemem za pomocą śmiechu i absurdu. Już w trakcie stanu wojennego na ulicach Wrocławia, w miejsce zatartych przez władze haseł antykomunistycznych, zaczęły pojawiać się rysunki krasnoludków. Później grupa skupiła się na organizacji happeningów (m.in. Krasnoludki na Świdnickiej). Od lat 90., Pomarańczowa Alternatywa znacznie ograniczyła swoją działalność, ale krasnoludki pozostały i teraz postrzegane są jako jeden z symboli Wrocławia.',
     },
     {
         id: 2,
@@ -72,32 +72,7 @@ export const quizData = [
                 comment: 'Coś w tym jest, ale póki co nazwa ta jeszcze się nie przyjęła :)'
             }
         ],
-        correctAnswer: 'Wrocław często bywa porównywany do Wenecji między innymi ze względu na liczbę mostów i kładek. O Wrocławiu mówi się też: "miasto stu mostów", choć w rzeczywistości posiada ich więcej.',
-    },
-    {
-        id: 2,
-        question: 'Jak nazywa się krasnal, widniejący na pierwszym zdjęciu tej witryny?',
-        answers: [
-            {
-                id: 'a',
-                text: 'Turysta?',
-                correct: true,
-                comment: 'Dobrze!',
-            },
-            {
-                id: 'b',
-                text: "WrocLovek?",
-                correct: false,
-                comment: 'Niestety nie. Przyjrzyj się dokładnie co krasnal trzyma w ręce i na szyi..',
-            },
-            {
-                id: 'c',
-                text: 'Życzliwek?',
-                correct: false,
-                comment: 'Niestety nie. Przyjrzyj się dokładnie co krasnal trzyma w ręce i na szyi..'
-            }
-        ],
-        correctAnswer: 'Poprawna odpowiedź to: Turysta. Na szyi ma zawieszony aparat, a w ręku trzyma najprawdopodomniej mapę. Możecie gospotkać przed Centrum Informacji Turystycznej na Rynku. Każdy krasnal ma swoje atrybuty, dzięki którym łatwiej go rozpoznać. Często też ich lokalizacja jest nieprzypadkowa, np. Bankuś stoi przed jednym z banków, a Śpiewak Operowy przed... budynkiem Opery :)',
+        correctAnswer: 'Poprawna odpowiedź: Wenecja Północy. Wrocław często bywa porównywany do Wenecji między innymi ze względu na liczbę mostów i kładek. O Wrocławiu mówi się też: "miasto stu mostów", choć w rzeczywistości posiada ich więcej.',
     },
     {
         id: 4,
@@ -122,7 +97,7 @@ export const quizData = [
                 comment: 'Niestety nie. We Wrocławiu jest sporo katedr, ale nie aż 7.'
             }
         ],
-        correctAnswer: 'Wrocławskie katedry (rozumiane jako kościoły biskupie) to: wspomniana już katedra św. Jana Chrzciciela, katedra polskokatolicka św. Marii Magdaleny, katedra greckokatolicka św. Wincentego i św. Jakuba, katedra prawosławna Narodzenia Przenajświętszej Bogurodzicy, kościół Opatrzności Bożej. Czyli w sumie jest ich pięć.',
+        correctAnswer: 'Poprawna odpowiedź: Pięć. Wrocławskie katedry (rozumiane jako kościoły biskupie) to: wspomniana już katedra św. Jana Chrzciciela, katedra polskokatolicka św. Marii Magdaleny, katedra greckokatolicka św. Wincentego i św. Jakuba, katedra prawosławna Narodzenia Przenajświętszej Bogurodzicy oraz kościół Opatrzności Bożej.',
     },
     {
         id: 5,
@@ -138,7 +113,7 @@ export const quizData = [
                 id: 'b',
                 text: "Oława.",
                 correct: true,
-                comment: 'Poprawna odpowiedź!',
+                comment: 'Dokładnie tak!',
             },
             {
                 id: 'c',
@@ -147,6 +122,6 @@ export const quizData = [
                 comment: 'Niestety nie. Pociągiem z Wrocławia do Jeleniej Góry i na odwrót dojechać można było przez Wałbrzych Główny od 1868 roku.'
             }
         ],
-        correctAnswer: '22 maja 1842 roku o godzinie 6:00 rano z Dworca Górnośląskiego we Wrocławiu odjechał pierwszy oficjalny pociąg do Oławy (trasa liczyła ok. 27 kilometrów, a przejazd trwał 42 minuty). Przypomnijmy, że zarówno Wrocław jak i Oława znajdowały się wtedy na ziemiach niemieckich.',
+        correctAnswer: 'Poprawna odpowiedź: Oława. 22 maja 1842 roku o godzinie 6:00 rano z Dworca Górnośląskiego we Wrocławiu odjechał pierwszy oficjalny pociąg do Oławy (trasa liczyła ok. 27 kilometrów, a przejazd trwał 42 minuty). Przypomnijmy, że zarówno Wrocław jak i Oława znajdowały się wtedy na ziemiach niemieckich.',
     },
 ]

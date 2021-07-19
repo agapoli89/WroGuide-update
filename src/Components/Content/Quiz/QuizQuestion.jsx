@@ -1,25 +1,45 @@
 import { quizData } from './QuizData';
 import Button from '../../Button/Button';
 
-const QuizQuestion = ({ number, isAnswerVisible, answerIsNotSelected, clickChangeSlide, clickCheckAnswer, clickNoAnswerSelected, selectedAnswer, changeAnswer, inputChecked, handleChangeInputChecked }) => {
+const QuizQuestion = ({ 
+        number, 
+        isAnswerVisible, 
+        answerIsNotSelected, 
+        clickChangeSlide, 
+        clickCheckAnswer, 
+        clickNoAnswerSelected, 
+        selectedAnswer, 
+        changeAnswer, 
+        inputChecked, 
+        handleChangeInputChecked 
+    }) => {
     
     const currentQuestion = quizData.filter(({id}) => id === number);
+    const checkedAnswer = currentQuestion[0].answers.filter(answer => answer.id === selectedAnswer)[0];
 
     const currentAnswers = currentQuestion[0].answers.map(({id, text}) => (
         <label key={id}>
-            <input type="radio" value={id} name={number} checked={inputChecked} onChange={handleChangeInputChecked} onClick={changeAnswer}/> {text}
+            <input 
+                type="radio" 
+                value={id} 
+                name={number}  
+                disabled={isAnswerVisible ? true : false} 
+                checked={inputChecked} 
+                onChange={handleChangeInputChecked}
+                onClick={changeAnswer}
+            /> {text}
         </label>
     ))
     
     const answerToDisplay = isAnswerVisible
         ? (
             <>
-                <p>{currentQuestion[0].answers.filter(answer => answer.id === selectedAnswer)[0].comment}</p>
+                <p className={`alert ${checkedAnswer.correct ? "alert-success" : "alert-danger"} mt-4`}>{checkedAnswer.comment}</p>
                 <p>{currentQuestion[0].correctAnswer}</p>
             </>
         ) 
         : answerIsNotSelected
-            ? (<p>Zaznacz jedną z odpowiedzi</p>)
+            ? (<p className='alert alert-danger mt-4'>Zaznacz jedną z odpowiedzi</p>)
             : null
 
     const buttonText = !isAnswerVisible 
