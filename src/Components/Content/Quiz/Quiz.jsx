@@ -13,9 +13,6 @@ const Quiz = () => {
     const [answerIsNotSelected, setAnswerIsNotSelected] = useState(false);
     const [isAnswerVisible, setIsAnswerVisible] = useState(false);
     const [score, setScore] = useState(0);
-    const [inputChecked, setInputChecked] = useState(false);
-
-    const handleChangeInputChecked = () => setInputChecked(true);
 
     const handleChangeSlide = () => {
         if (slideNumber === 6) {
@@ -24,19 +21,15 @@ const Quiz = () => {
             return;
         }
         if (isAnswerVisible || slideNumber === 0) {
-            setSelectedAnswer('');
             setSlideNumber(prev => prev + 1);
             setIsAnswerVisible(false);
             setAnswerIsNotSelected(false);
             return;
         } 
-        if (!isAnswerVisible) setInputChecked(false);
         checkCorrectAnswer();
     }
 
-    const handleOnChangeAnswer = e => {
-        setSelectedAnswer(e.target.value);
-    }
+    const handleOnChangeAnswer = e => setSelectedAnswer(e.target.value);
 
     const checkCorrectAnswer = () => {
 
@@ -63,12 +56,10 @@ const Quiz = () => {
             isAnswerVisible={isAnswerVisible} 
             answerIsNotSelected={answerIsNotSelected} 
             selectedAnswer={selectedAnswer}
-            inputChecked={inputChecked}
             clickChangeSlide={handleChangeSlide} 
             clickCheckAnswer={checkCorrectAnswer} 
             clickNoAnswerSelected={handleNoAnswerSelected}
             changeAnswer={handleOnChangeAnswer}
-            handleChangeInputChecked={handleChangeInputChecked}
           />;
 
     return (  

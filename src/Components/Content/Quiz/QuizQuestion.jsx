@@ -10,8 +10,6 @@ const QuizQuestion = ({
         clickNoAnswerSelected, 
         selectedAnswer, 
         changeAnswer, 
-        inputChecked, 
-        handleChangeInputChecked 
     }) => {
     
     const currentQuestion = quizData.filter(({id}) => id === number);
@@ -24,9 +22,7 @@ const QuizQuestion = ({
                 value={id} 
                 name={number}  
                 disabled={isAnswerVisible ? true : false} 
-                checked={inputChecked} 
-                onChange={handleChangeInputChecked}
-                onClick={changeAnswer}
+                onChange={changeAnswer}
             /> {text}
         </label>
     ))
