@@ -21,7 +21,7 @@ const QuizQuestion = ({
                 type="radio" 
                 value={id} 
                 name={number}  
-                disabled={isAnswerVisible ? true : false} 
+                disabled={isAnswerVisible && true} 
                 onChange={changeAnswer}
             /> {text}
         </label>
