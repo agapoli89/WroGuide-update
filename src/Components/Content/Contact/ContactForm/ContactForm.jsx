@@ -2,7 +2,7 @@ import Button from '../../../Button/Button'
 
 const ContactForm = () => {
     return (  
-        <div className="contact__form-wrapper">
+        <div id="contact-form" className="contact__form-wrapper">
             <h3>Formularz</h3>
             <form className="contact__form">
                 <div className="mb-3">
