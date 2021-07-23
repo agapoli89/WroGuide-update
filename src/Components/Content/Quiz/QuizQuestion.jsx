@@ -1,3 +1,5 @@
+import Expand from 'react-expand-animated';
+
 import { quizData } from './QuizData';
 import Button from '../../Button/Button';
 
@@ -36,7 +38,7 @@ const QuizQuestion = ({
         ) 
         : answerIsNotSelected
             ? (<p className='alert alert-danger mt-4'>Zaznacz jedną z odpowiedzi</p>)
-            : null
+            : '' 
 
     const buttonText = !isAnswerVisible 
         ? "Sprawdź"
@@ -54,7 +56,9 @@ const QuizQuestion = ({
         <>
             <h4>{`${number}. ${currentQuestion[0].question}`}</h4>
             {currentAnswers}
-            {answerToDisplay}
+            <Expand open={isAnswerVisible}>
+                {answerToDisplay}
+            </Expand>
             <Button text={buttonText} click={clickFunction} />
         </>
     );
