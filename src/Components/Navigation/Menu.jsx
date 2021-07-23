@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavHashLink as Link } from 'react-router-hash-link';
+
 import { scrollWithOffset } from '../../helpers/ScrollWithOffset'
 
 import './Menu.scss';

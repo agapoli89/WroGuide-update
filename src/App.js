@@ -1,6 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
+
 import Arrow from './Components/Arrow/Arrow';
 import Content from './Components/Content/Content';
 import Footer from './Components/Footer/Footer';

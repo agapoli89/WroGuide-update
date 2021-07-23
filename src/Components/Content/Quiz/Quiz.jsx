@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
+import { quizData } from './QuizData';
 import QuizStart from './QuizStart';
 import QuizQuestion from './QuizQuestion';
 import QuizSummary from './QuizSummary';
-import { quizData } from './QuizData';
 
 import './Quiz.scss';
 
