@@ -1,6 +1,7 @@
 import '../../../../../styles/fontello-72a473c8/css/fontello.css';
 import { NavHashLink as Link } from 'react-router-hash-link';
-import { scrollWithOffset } from '../../../../../helpers/ScrollWithOffset'
+import { scrollWithOffset } from '../../../../../helpers/ScrollWithOffset';
+import ContactDataBoxButton from '../../../../Button/ContactDataBoxButton';
 
 const ContactDataBox = ({ name, href, icon, styleClass}) => {
 
@@ -12,10 +13,7 @@ const ContactDataBox = ({ name, href, icon, styleClass}) => {
             exact
             className="contact__link"
         >
-            <button className={styleClass}>
-                <i className={icon}></i>
-                <span>{name}</span>
-            </button>
+            <ContactDataBoxButton styleClass={styleClass} icon={icon} name={name}/>
         </Link>
     )
     return (  
@@ -24,10 +22,7 @@ const ContactDataBox = ({ name, href, icon, styleClass}) => {
             ? linkToForm 
             : (
                 <a target={name ==='Facebook' ? "_blank" : null} rel="noreferrer" className="contact__link" href={href}>
-                    <button className={styleClass}>
-                        <i className={icon}></i>
-                        <span>{name}</span>
-                    </button>
+                    <ContactDataBoxButton styleClass={styleClass} icon={icon} name={name}/>
                 </a> 
             )}
         </>
