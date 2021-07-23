@@ -93,5 +93,13 @@
         @media (min-width: $layout-breakpoint-medium) {
             width: 80%;
         }
+
+        &__invalid-feedback {
+            color: $outstanding-color;
+        }
     }
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    border-color: $outstanding-color;
 }
