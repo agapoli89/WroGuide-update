@@ -1,15 +1,8 @@
 import '../../../../../styles/fontello-72a473c8/css/fontello.css';
 import { NavHashLink as Link } from 'react-router-hash-link';
+import { scrollWithOffset } from '../../../../../helpers/ScrollWithOffset'
 
 const ContactDataBox = ({ name, href, icon, styleClass}) => {
-
-    const scrollWithOffset = (el, offset) => {
-        window.scroll({
-          top: el.offsetTop - offset,
-          left: 0,
-          behavior: "smooth"
-        });
-    };
 
     const linkToForm = (
         <Link 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavHashLink as Link } from 'react-router-hash-link';
+import { scrollWithOffset } from '../../helpers/ScrollWithOffset'
 
 import './Menu.scss';
 
@@ -9,15 +10,6 @@ const Menu = () => {
     const isNotMobileMenu = useMediaQuery({ query: '(min-width:576px)' });
 
     const toggleMenu = () => setIsMenuVisible(prev => !prev);
-
-    //function from: https://codesandbox.io/s/04rsh?file=/src/components/Navbar.jsx:977-1018
-    const scrollWithOffset = (el, offset) => {
-        window.scroll({
-          top: el.offsetTop - offset,
-          left: 0,
-          behavior: "smooth"
-        });
-    };
 
     return (  
         <aside className="menu">
@@ -93,5 +85,5 @@ const Menu = () => {
          </aside>
     );
 }
- 
+  
 export default Menu;
