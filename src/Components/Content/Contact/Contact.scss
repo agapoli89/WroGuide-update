@@ -14,7 +14,7 @@
         grid-template-areas: 
             "header header"
             "data form";
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); 
         column-gap: 30px;
 
         &__data, &__form-wrapper {
@@ -55,11 +55,18 @@
             @media (min-width: $layout-breakpoint-large) {
                 padding-top: 0;
                 padding-bottom: 0;
+            } 
+
+            &:hover {
+                background-color: $boxex-hover-color;
             }
 
             &--outstanding {
                 background-color: $outstanding-color;
-            } 
+                &:hover {
+                    background-color: $outstanding-color-hover;
+                }
+            }
         }
     }
 
