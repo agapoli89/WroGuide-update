@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/WroGuide-update/static/css/main.4bf883e6.chunk.css",
-    "main.js": "/WroGuide-update/static/js/main.8fa6481c.chunk.js",
-    "main.js.map": "/WroGuide-update/static/js/main.8fa6481c.chunk.js.map",
-    "runtime-main.js": "/WroGuide-update/static/js/runtime-main.2b232608.js",
-    "runtime-main.js.map": "/WroGuide-update/static/js/runtime-main.2b232608.js.map",
+    "main.css": "/WroGuide-update/static/css/main.35e58467.chunk.css",
+    "main.js": "/WroGuide-update/static/js/main.3e0cde51.chunk.js",
+    "main.js.map": "/WroGuide-update/static/js/main.3e0cde51.chunk.js.map",
+    "runtime-main.js": "/WroGuide-update/static/js/runtime-main.3473213a.js",
+    "runtime-main.js.map": "/WroGuide-update/static/js/runtime-main.3473213a.js.map",
     "static/css/2.455652b6.chunk.css": "/WroGuide-update/static/css/2.455652b6.chunk.css",
-    "static/js/2.37d76c04.chunk.js": "/WroGuide-update/static/js/2.37d76c04.chunk.js",
-    "static/js/2.37d76c04.chunk.js.map": "/WroGuide-update/static/js/2.37d76c04.chunk.js.map",
-    "static/js/3.e767676a.chunk.js": "/WroGuide-update/static/js/3.e767676a.chunk.js",
-    "static/js/3.e767676a.chunk.js.map": "/WroGuide-update/static/js/3.e767676a.chunk.js.map",
+    "static/js/2.186efd66.chunk.js": "/WroGuide-update/static/js/2.186efd66.chunk.js",
+    "static/js/2.186efd66.chunk.js.map": "/WroGuide-update/static/js/2.186efd66.chunk.js.map",
+    "static/js/3.f119e86f.chunk.js": "/WroGuide-update/static/js/3.f119e86f.chunk.js",
+    "static/js/3.f119e86f.chunk.js.map": "/WroGuide-update/static/js/3.f119e86f.chunk.js.map",
     "index.html": "/WroGuide-update/index.html",
     "static/css/2.455652b6.chunk.css.map": "/WroGuide-update/static/css/2.455652b6.chunk.css.map",
-    "static/css/main.4bf883e6.chunk.css.map": "/WroGuide-update/static/css/main.4bf883e6.chunk.css.map",
-    "static/js/2.37d76c04.chunk.js.LICENSE.txt": "/WroGuide-update/static/js/2.37d76c04.chunk.js.LICENSE.txt",
+    "static/css/main.35e58467.chunk.css.map": "/WroGuide-update/static/css/main.35e58467.chunk.css.map",
+    "static/js/2.186efd66.chunk.js.LICENSE.txt": "/WroGuide-update/static/js/2.186efd66.chunk.js.LICENSE.txt",
     "static/media/aga.742ff934.jpg": "/WroGuide-update/static/media/aga.742ff934.jpg",
     "static/media/App.scss": "/WroGuide-update/static/media/background-image.0b299806.png",
     "static/media/fontello.css": "/WroGuide-update/static/media/fontello.efc9cb8d.eot",
@@ -23,10 +23,10 @@
     "static/media/wroclaw_uniwersytet_wroclawski_o_poranku.3cd08eb3.jpg": "/WroGuide-update/static/media/wroclaw_uniwersytet_wroclawski_o_poranku.3cd08eb3.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b232608.js",
+    "static/js/runtime-main.3473213a.js",
     "static/css/2.455652b6.chunk.css",
-    "static/js/2.37d76c04.chunk.js",
-    "static/css/main.4bf883e6.chunk.css",
-    "static/js/main.8fa6481c.chunk.js"
+    "static/js/2.186efd66.chunk.js",
+    "static/css/main.35e58467.chunk.css",
+    "static/js/main.3e0cde51.chunk.js"
   ]
 }
