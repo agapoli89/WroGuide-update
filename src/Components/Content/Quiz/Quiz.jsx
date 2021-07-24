@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { quizData } from './QuizData';
+import { scrollWithOffset } from '../../../helpers/ScrollWithOffset';
 import QuizStart from './QuizStart';
 import QuizQuestion from './QuizQuestion';
 import QuizSummary from './QuizSummary';
@@ -14,13 +15,18 @@ const Quiz = () => {
     const [isAnswerVisible, setIsAnswerVisible] = useState(false);
     const [score, setScore] = useState(0);
 
+    const quizSection = useRef('');
+
     const handleChangeSlide = () => {
         if (slideNumber === 6) {
             setSlideNumber(0);
             setScore(0);
+            setSelectedAnswer('');
             return;
         }
         if (isAnswerVisible || slideNumber === 0) {
+            /* setSelectedAnswer(''); */
+            scrollWithOffset(quizSection.current, 55)
             setSlideNumber(prev => prev + 1);
             setIsAnswerVisible(false);
             setAnswerIsNotSelected(false);
@@ -63,9 +69,9 @@ const Quiz = () => {
           />;
 
     return (  
-        <section id="quiz" className="section quiz">
+        <section ref={quizSection} id="quiz" className="section quiz">
             {quizContent} 
-        </section>
+        </section> 
     );
 }
  

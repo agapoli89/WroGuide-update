@@ -11,7 +11,7 @@ export const quizData = [
             },
             {
                 id: 'b',
-                text: "Uwielbiam pomarańcze?",
+                text: 'Uwielbiam pomarańcze?',
                 correct: false,
                 comment: 'Niestety nie. Lubię pomarańcze, ale to nie jest powód dla którego pomarańczowy znalazł się na mojej stronie.',
             },
@@ -36,7 +36,7 @@ export const quizData = [
             },
             {
                 id: 'b',
-                text: "WrocLovek?", 
+                text: 'WrocLovek?', 
                 correct: false,
                 comment: 'Niestety nie. Przyjrzyj się dokładnie co krasnal trzyma w ręce i na szyi..',
             },
@@ -55,13 +55,13 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
-                text: "Wenecją Północy?",
+                text: 'Wenecją Północy?',
                 correct: true,
                 comment: 'Prawidłowa odpowiedź! :)',
             },
             {
                 id: 'b',
-                text: "Polskim Amsterdamem?",
+                text: 'Polskim Amsterdamem?',
                 correct: false,
                 comment: 'Mogłoby tak być, chociaż ja nigdy nie spotkałam się z tym określeniem odnoście Wrocławia. Ponoć Polskim Amsterdamem nazywana jest Bydgoszcz.',
             },
@@ -80,13 +80,13 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
-                text: "Jedna. Katedra św. Jana Chrzciciela na Ostrowie Tumskim?",
+                text: 'Jedna. Katedra św. Jana Chrzciciela na Ostrowie Tumskim?',
                 correct: false,
                 comment: 'Niestety nie. Katedra rzymskokatolicka pw. św. Jana Chrzciciela jest najbardziej znana, ale nie jedyna we Wrocławiu.',
             },
             {
                 id: 'b',
-                text: "Pięć",
+                text: 'Pięć',
                 correct: true,
                 comment: 'Zgadza się.',
             },
@@ -105,13 +105,13 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
-                text: "Oleśnica?",
+                text: 'Oleśnica?',
                 correct: false,
                 comment: 'Niestety nie. Chociaż linia kolejowa: Wrocław Mikołajów - Oleśnica także ma długą historię, bo pierwszy pociąg na tej trasie wyruszył już w 1868 roku.',
             },
             {
                 id: 'b',
-                text: "Oława.",
+                text: 'Oława.',
                 correct: true,
                 comment: 'Dokładnie tak!',
             },

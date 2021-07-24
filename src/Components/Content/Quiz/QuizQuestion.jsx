@@ -41,7 +41,7 @@ const QuizQuestion = ({
             : '' 
 
     const buttonText = !isAnswerVisible 
-        ? "Sprawdź"
+        ? "Sprawdź" 
         : number === 5
             ? "Sprawdź wynik"
             : "Następne pytanie"
@@ -56,7 +56,7 @@ const QuizQuestion = ({
         <>
             <h4>{`${number}. ${currentQuestion[0].question}`}</h4>
             {currentAnswers}
-            <Expand open={isAnswerVisible}>
+            <Expand open={isAnswerVisible || answerIsNotSelected}>
                 {answerToDisplay}
             </Expand>
             <Button text={buttonText} click={clickFunction} />
