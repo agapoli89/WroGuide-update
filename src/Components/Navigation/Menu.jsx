@@ -24,7 +24,6 @@ const Menu = () => {
             <ul className={`collapse ${isNotMobileMenu | isMenuVisible && 'show'} menu__list`} id="navbarToggleExternalContent">
                 <li className="nav-item">
                     <Link 
-                        activeclass="active"
                         to="/#about-me" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
@@ -36,7 +35,6 @@ const Menu = () => {
 				</li>
 				<li className="nav-item">
                     <Link 
-                        activeclass="active"
                         to="/#offert" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
@@ -48,7 +46,6 @@ const Menu = () => {
 				</li>
 				<li className="nav-item" >
                     <Link 
-                        activeclass="active"
                         to="/#about-wroclaw"
                         scroll={(el) => scrollWithOffset(el, 55)} 
                         exact
@@ -60,7 +57,6 @@ const Menu = () => {
 				</li> 
 				<li className="nav-item">
                     <Link 
-                        activeclass="active"
                         to="/#quiz" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
@@ -72,7 +68,6 @@ const Menu = () => {
 				</li>
 				<li className="nav-item">
                     <Link 
-                        activeclass="active"
                         to="/#contact" 
                         scroll={(el) => scrollWithOffset(el, 55)}
                         exact
