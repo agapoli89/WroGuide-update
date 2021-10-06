@@ -14,17 +14,18 @@ const QuizQuestion = ({
         changeAnswer, 
     }) => {
     
-    const currentQuestion = quizData.filter(({id}) => id === number);
-    const checkedAnswer = currentQuestion[0].answers.filter(answer => answer.id === selectedAnswer)[0];
+    const currentQuestion = quizData.find(({id}) => id === number);
+    const checkedAnswer = currentQuestion.answers.find(answer => answer.id === selectedAnswer);
 
-    const currentAnswers = currentQuestion[0].answers.map(({id, text}) => (
-        <label key={id}>
+    const currentAnswers = currentQuestion.answers.map(({id, key, text}) => (
+        <label key={key}>
             <input 
                 type="radio" 
                 value={id} 
                 name={number}  
                 disabled={isAnswerVisible && true} 
                 onChange={changeAnswer}
+                className="radio"
             /> {text}
         </label>
     ))
@@ -33,7 +34,7 @@ const QuizQuestion = ({
         ? (
             <>
                 <p className={`alert ${checkedAnswer.correct ? "alert-success" : "alert-danger"} mt-4`}>{checkedAnswer.comment}</p>
-                <p>{currentQuestion[0].correctAnswer}</p>
+                <p>{currentQuestion.correctAnswer}</p>
             </>
         ) 
         : answerIsNotSelected
@@ -54,7 +55,7 @@ const QuizQuestion = ({
 
     return (  
         <>
-            <h4>{`${number}. ${currentQuestion[0].question}`}</h4>
+            <h4>{`${number}. ${currentQuestion.question}`}</h4>
             {currentAnswers}
             <Expand open={isAnswerVisible || answerIsNotSelected}>
                 {answerToDisplay}
