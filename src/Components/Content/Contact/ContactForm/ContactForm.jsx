@@ -1,18 +1,17 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 import Button from '../../../Button/Button';
-
+//biblioteki do walidacji: Corny, react form)
 const ContactForm = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [feedbackMessage, setFeedbackMessage] = useState(null);
+    const [isEmailInvalid, setIsEmailInvalid] = useState(false);
+    const [isMessageInvalid, setIsMessageInvalid] = useState(false);
 
     const handleEmailChange = e => setEmail(e.target.value);
     const handleMessageChange = e => setMessage(e.target.value);
-
-    const emailInput = useRef('');
-    const messageInput = useRef('');
 
     const serviceID = 'gmail';
     const templateID = 'template_572pfwp';
@@ -23,9 +22,17 @@ const ContactForm = () => {
         const validatedEmail = validateEmail(email);
         const validatedMessage = validateMessage(message);
 
-        !validatedEmail ? emailInput.current.classList.add("is-invalid") : emailInput.current.classList.remove("is-invalid");;
+        if (!validatedEmail) {
+            setIsEmailInvalid(true);
+        } else {
+            setIsEmailInvalid(false);
+        };
 
-        !validatedMessage ? messageInput.current.classList.add("is-invalid") : messageInput.current.classList.remove("is-invalid");
+        if (!validatedMessage) {
+            setIsMessageInvalid(true);
+        } else {
+            setIsMessageInvalid(false);
+        };
 
         if (validatedEmail && validatedMessage) sendMessage(email, message);
     }
@@ -34,6 +41,7 @@ const ContactForm = () => {
         // re from: "https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript";
         
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
         return re.test(String(email).toLowerCase());
     }
 
@@ -73,12 +81,12 @@ const ContactForm = () => {
             <form className="contact__form">
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Adres e-mail</label>
-                    <input ref={emailInput} type="email" className="form-control" id="email" placeholder="nazwa@domena"  value={email} onChange={handleEmailChange}/>
+                    <input type="email" className={`form-control ${isEmailInvalid && "is-invalid"}`} id="email" placeholder="nazwa@domena"  value={email} onChange={handleEmailChange}/>
                     <div className="invalid-feedback contact__form__invalid-feedback">Proszę, wpisz adres email w odpowiednim formacie.</div>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="message" className="form-label">Wiadomość</label>
-                    <textarea ref={messageInput} className="form-control" id="message" placeholder="Zapraszam do kontaktu :)" rows="3" value={message} onChange={handleMessageChange}></textarea>
+                    <textarea className={`form-control ${isMessageInvalid && "is-invalid"}`} id="message" placeholder="Zapraszam do kontaktu :)" rows="3" value={message} onChange={handleMessageChange}></textarea>
                     <div className="invalid-feedback contact__form__invalid-feedback">Wiadomość musi mieć minimum 10 znaków.</div>
                 </div>
                 {feedbackMessage}
