@@ -1,11 +1,14 @@
 import Button from '../../Button/Button';
 
 const QuizSummary = ({click, score}) => {
+
+    const goodScoreComment = score === 3
+    ? "Widać, że masz sporą wiedzę o Wrocławiu, ale wciąż znajdzie się parę ciekawostek, które mogą Cię zainteresować. Zapraszam na wycieczkę!"
+    : "Gratulacje! Twoja wiedza o Wrocławiu jest imponująca! Czas zastanowić się nad zrobieniem kursu na przewodnika :)"
+
     const comment = score <= 2
         ? "Zdecydowanie przyda Ci się wycieczka po Wrocławiu z przewodnikiem :) Zapraszam!"
-        : score === 3
-            ? "Widać, że masz sporą wiedzę o Wrocławiu, ale wciąż znajdzie się parę ciekawostek, które mogą Cię zainteresować. Zapraszam na wycieczkę!"
-            : "Gratulacje! Twoja wiedza o Wrocławiu jest imponująca! Czas zastanowić się nad zrobieniem kursu na przewodnika :)"
+        : goodScoreComment
 
     return (  
         <>
