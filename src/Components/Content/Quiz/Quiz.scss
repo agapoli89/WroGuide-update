@@ -3,3 +3,19 @@
     flex-direction: column;
     text-align: justify;
 }
+
+input[type="radio"]:disabled {
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 0px;
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: white;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+    background-color: #0d6efd;
+}
