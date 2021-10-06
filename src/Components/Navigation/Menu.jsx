@@ -2,15 +2,57 @@ import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NavHashLink as Link } from 'react-router-hash-link';
 
-import { scrollWithOffset } from '../../helpers/ScrollWithOffset'
+import { scrollWithOffset } from '../../helpers/ScrollWithOffset';
 
 import './Menu.scss';
+
+const menuData = [
+    {
+        text: "O mnie",
+        url: "/#about-me"
+    },
+    {
+        text: "Co oferuję",
+        url: "/#offert"
+    },
+    {
+        text: "Wrocław",
+        url: "/#about-wroclaw"
+    },
+    {
+        text: "Quiz", 
+        url: "/#quiz"
+    },
+    {
+        text: "Kontakt",
+        url: "/#contact"
+    }
+]
 
 const Menu = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const isNotMobileMenu = useMediaQuery({ query: '(min-width:576px)' });
+    const offsetToScroll = 55;
 
     const toggleMenu = () => setIsMenuVisible(prev => !prev);
+
+    const LinkToDisplay = ({text, url}) => (
+        <Link 
+            to={url} 
+            scroll={(el) => scrollWithOffset(el, offsetToScroll)}
+            exact
+            className="nav-link menu__link"
+            onClick={!isNotMobileMenu ? toggleMenu : undefined}
+        >
+            {text}
+        </Link>
+    )
+
+    const liToDisplay = menuData.map(({text, url}) => (
+        <li className="nav-item">
+            <LinkToDisplay text={text} url={url}/>
+		</li>
+    ))
 
     return (  
         <aside className="menu">
@@ -21,62 +63,8 @@ const Menu = () => {
                     </button>
                 </div>
             </nav>
-            <ul className={`collapse ${isNotMobileMenu | isMenuVisible && 'show'} menu__list`} id="navbarToggleExternalContent">
-                <li className="nav-item">
-                    <Link 
-                        to="/#about-me" 
-                        scroll={(el) => scrollWithOffset(el, 55)}
-                        exact
-                        className="nav-link menu__link"
-                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
-                    >
-                        O mnie
-                    </Link>
-				</li>
-				<li className="nav-item">
-                    <Link 
-                        to="/#offert" 
-                        scroll={(el) => scrollWithOffset(el, 55)}
-                        exact
-                        className="nav-link menu__link"
-                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
-                    >
-                        Co oferuję
-                    </Link>
-				</li>
-				<li className="nav-item" >
-                    <Link 
-                        to="/#about-wroclaw"
-                        scroll={(el) => scrollWithOffset(el, 55)} 
-                        exact
-                        className="nav-link menu__link"
-                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
-                    >
-                        Wrocław
-                    </Link>
-				</li> 
-				<li className="nav-item">
-                    <Link 
-                        to="/#quiz" 
-                        scroll={(el) => scrollWithOffset(el, 55)}
-                        exact
-                        className="nav-link menu__link"
-                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
-                    >
-                        Quiz
-                    </Link>
-				</li>
-				<li className="nav-item">
-                    <Link 
-                        to="/#contact" 
-                        scroll={(el) => scrollWithOffset(el, 55)}
-                        exact
-                        className="nav-link menu__link"
-                        onClick={!isNotMobileMenu ? toggleMenu : undefined}
-                    >
-                        Kontakt
-                    </Link>
-				</li> 
+            <ul className={`collapse ${(isNotMobileMenu || isMenuVisible) && 'show'} menu__list`} id="navbarToggleExternalContent">
+                {liToDisplay}
             </ul>
          </aside>
     );
