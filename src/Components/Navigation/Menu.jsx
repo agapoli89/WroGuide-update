@@ -49,7 +49,7 @@ const Menu = () => {
     )
 
     const liToDisplay = menuData.map(({text, url}) => (
-        <li className="nav-item">
+        <li key={url} className="nav-item">
             <LinkToDisplay text={text} url={url}/>
 		</li>
     ))
