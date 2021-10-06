@@ -5,18 +5,21 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
+                key: "1a",
                 text: 'Kolor pomarańczowy widnieje na fladze Wrocławia?',
                 correct: false,
                 comment: 'Niestety nie. Na fladze Wrocławia widnieją kolory: czerwony i żółty. Nie mogę przyznać punktu mimo, że te dwie barwy po połączeniu faktycznie tworzą pomarańczowy :)',
             },
             {
                 id: 'b',
+                key: "1b",
                 text: 'Uwielbiam pomarańcze?',
                 correct: false,
                 comment: 'Niestety nie. Lubię pomarańcze, ale to nie jest powód dla którego pomarańczowy znalazł się na mojej stronie.',
             },
             {
                 id: 'c',
+                key: "1c",
                 text: 'Jest to nawiązanie do Pomarańczowej Alternatywy?',
                 correct: true,
                 comment: 'Tak!'
@@ -30,18 +33,21 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
+                key: '2a',
                 text: 'Turysta?',
                 correct: true,
                 comment: 'Dobrze!',
             },
             {
                 id: 'b',
+                key: '2b',
                 text: 'WrocLovek?', 
                 correct: false,
                 comment: 'Niestety nie. Przyjrzyj się dokładnie co krasnal trzyma w ręce i na szyi..',
             },
             {
                 id: 'c',
+                key: '2c',
                 text: 'Życzliwek?',
                 correct: false,
                 comment: 'Niestety nie. Przyjrzyj się dokładnie co krasnal trzyma w ręce i na szyi..'
@@ -55,18 +61,21 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
+                key: '3a',
                 text: 'Wenecją Północy?',
                 correct: true,
                 comment: 'Prawidłowa odpowiedź! :)',
             },
             {
                 id: 'b',
+                key: '3b',
                 text: 'Polskim Amsterdamem?',
                 correct: false,
                 comment: 'Mogłoby tak być, chociaż ja nigdy nie spotkałam się z tym określeniem odnoście Wrocławia. Ponoć Polskim Amsterdamem nazywana jest Bydgoszcz.',
             },
             {
                 id: 'c',
+                key: '3c',
                 text: 'Perłą znad Odry?',
                 correct: false,
                 comment: 'Coś w tym jest, ale póki co nazwa ta jeszcze się nie przyjęła :)'
@@ -80,18 +89,21 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
+                key: '4a',
                 text: 'Jedna. Katedra św. Jana Chrzciciela na Ostrowie Tumskim?',
                 correct: false,
                 comment: 'Niestety nie. Katedra rzymskokatolicka pw. św. Jana Chrzciciela jest najbardziej znana, ale nie jedyna we Wrocławiu.',
             },
             {
                 id: 'b',
+                key: '4b',
                 text: 'Pięć',
                 correct: true,
                 comment: 'Zgadza się.',
             },
             {
                 id: 'c',
+                key: '4c',
                 text: 'Siedem?',
                 correct: false,
                 comment: 'Niestety nie. We Wrocławiu jest sporo katedr, ale nie aż 7.'
@@ -105,18 +117,21 @@ export const quizData = [
         answers: [
             {
                 id: 'a',
+                key: '5a',
                 text: 'Oleśnica?',
                 correct: false,
                 comment: 'Niestety nie. Chociaż linia kolejowa: Wrocław Mikołajów - Oleśnica także ma długą historię, bo pierwszy pociąg na tej trasie wyruszył już w 1868 roku.',
             },
             {
                 id: 'b',
+                key: '5b',
                 text: 'Oława.',
                 correct: true,
                 comment: 'Dokładnie tak!',
             },
             {
                 id: 'c',
+                key: '5c',
                 text: 'Jelenia Góra?',
                 correct: false,
                 comment: 'Niestety nie. Pociągiem z Wrocławia do Jeleniej Góry i na odwrót dojechać można było przez Wałbrzych Główny od 1868 roku.'
