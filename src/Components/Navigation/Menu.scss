@@ -4,8 +4,8 @@
 .menu {
     background-color: $section-background-color;
     color: $main-color;
-	position: -webkit-sticky !important;
-	position: sticky !important;
+	position: -webkit-sticky;
+	position: sticky;
 	top: 0;
 	z-index: 3;
 

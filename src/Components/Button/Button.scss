@@ -2,10 +2,10 @@
 
 .button {
     color: $main-color !important;
-    background-color: $outstanding-color !important;
-    border-color: $outstanding-color !important;
+    background-color: $outstanding-color;
+    border-color: $outstanding-color;
     width: 200px;
-    font-size: 1.2rem !important;
+    font-size: 1.2rem;
 }
 
 .button--center {
