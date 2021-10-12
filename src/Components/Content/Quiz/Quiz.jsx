@@ -15,18 +15,25 @@ const Quiz = () => {
     const [isAnswerVisible, setIsAnswerVisible] = useState(false);
     const [score, setScore] = useState(0);
 
+    const offsetToScroll = 55;
+    const notQuestionSlides = 2;
+    const slidesLength = quizData.length + notQuestionSlides;
+
     const quizSection = useRef('');
 
+    const resetQuiz = () => {
+        setSlideNumber(0);
+        setScore(0);
+        setSelectedAnswer('');
+    }
+
     const handleChangeSlide = () => {
-        if (slideNumber === 6) {
-            setSlideNumber(0);
-            setScore(0);
-            setSelectedAnswer('');
+        if (slideNumber === slidesLength - 1) {
+            resetQuiz();
             return;
         }
         if (isAnswerVisible || slideNumber === 0) {
-            /* setSelectedAnswer(''); */
-            scrollWithOffset(quizSection.current, 55)
+            scrollWithOffset(quizSection.current, offsetToScroll)
             setSlideNumber(prev => prev + 1);
             setIsAnswerVisible(false);
             setAnswerIsNotSelected(false);
@@ -39,8 +46,8 @@ const Quiz = () => {
 
     const checkCorrectAnswer = () => {
 
-        const currentQuestion = quizData.filter(question => question.id === Number(slideNumber))[0];
-        const correctAnswer = currentQuestion.answers.filter(answer => answer.correct === true)[0].id;
+        const currentQuestion = quizData.find(question => question.id === Number(slideNumber));
+        const correctAnswer = currentQuestion.answers.find(answer => answer.correct === true).id;
 
         if (correctAnswer === selectedAnswer) {
             setScore(prev => prev + 1);
