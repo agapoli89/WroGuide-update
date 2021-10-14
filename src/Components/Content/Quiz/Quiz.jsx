@@ -47,7 +47,7 @@ const Quiz = () => {
     const checkCorrectAnswer = () => {
 
         const currentQuestion = quizData.find(question => question.id === Number(slideNumber));
-        const correctAnswer = currentQuestion.answers.find(answer => answer.correct === true).id;
+        const correctAnswer = currentQuestion ? currentQuestion.answers.find(answer => answer.correct === true).id : null;
 
         if (correctAnswer === selectedAnswer) {
             setScore(prev => prev + 1);
